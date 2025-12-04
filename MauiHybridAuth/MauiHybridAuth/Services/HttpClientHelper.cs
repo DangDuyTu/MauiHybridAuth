@@ -6,7 +6,7 @@
     internal class HttpClientHelper
     {
         //TODO: Place this in AppSettings or Client config file
-        private static string _baseUrl = "https://localhost:7157/";
+        private static string _baseUrl = "https://localhost:8480/";
         public static string BaseUrl
         {
             get
@@ -22,8 +22,8 @@
                 return _baseUrl;
             }
         }
-        public static string LoginUrl => $"{BaseUrl}identity/login";
-        public static string RefreshUrl => $"{BaseUrl}identity/refresh";
+        public static string LoginUrl => $"{BaseUrl}account/login";
+        public static string RefreshUrl => $"{BaseUrl}account/refresh-token";
         public static string WeatherUrl => $"{BaseUrl}api/weather";
 
         public static HttpClient GetHttpClient()
